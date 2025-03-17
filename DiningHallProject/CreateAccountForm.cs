@@ -61,62 +61,57 @@ namespace DiningHallProject
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            DatabaseInteraction interaction = new DatabaseInteraction();
-            if (UserNameText != null)
+            if (string.IsNullOrWhiteSpace(UserNameText.Text))
             {
-                if ((PasswordText.Text == ConfirmText.Text) && (PasswordText != null))
-                {
-                    String Password = PasswordText.Text;
-
-                    if (StudentID.Text != string.Empty)
-                    {
-                        if (StudentEmail.Text != string.Empty)
-                        {
-                            if (firstName.Text != string.Empty && lastName.Text != string.Empty)
-                            {
-                                if (plan1radial.Checked == true)
-                                {
-                                    interaction.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, UserNameText.Text, Password, StudentEmail.Text, 1120);
-                                    this.Close();
-                                }
-                                else if (plan2radial.Checked == true)
-                                {
-                                    interaction.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, UserNameText.Text, Password, StudentEmail.Text, 1475);
-                                    this.Close();
-                                }
-                                else if (plan3radial.Checked == true)
-                                {
-                                    interaction.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, UserNameText.Text, Password, StudentEmail.Text, 1795);
-                                    this.Close();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("You Must Choose A Plan!");
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("You Must Submit Your Full Name!");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("You must Input Your Email!");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("You Must Input Your Student ID!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Passwords Must Be the Same!");
-                }
+                MessageBox.Show("You must choose a username!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else 
+
+            if (string.IsNullOrWhiteSpace(PasswordText.Text) || PasswordText.Text != ConfirmText.Text)
             {
-                MessageBox.Show("You Must Choose A Username!");
+                MessageBox.Show("Passwords must match and cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(StudentID.Text))
+            {
+                MessageBox.Show("You must input your Student ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(StudentEmail.Text))
+            {
+                MessageBox.Show("You must input your Email!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(firstName.Text) || string.IsNullOrWhiteSpace(lastName.Text))
+            {
+                MessageBox.Show("You must submit your full name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int budget = 0;
+            if (plan1radial.Checked) budget = 1120;
+            else if (plan2radial.Checked) budget = 1475;
+            else if (plan3radial.Checked) budget = 1795;
+            else
+            {
+                MessageBox.Show("You must choose a meal plan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Call DatabaseHelper to add account to the database
+                DatabaseHelper.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, UserNameText.Text, PasswordText.Text, StudentEmail.Text, budget);
+
+                MessageBox.Show("Account successfully created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error creating account: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
