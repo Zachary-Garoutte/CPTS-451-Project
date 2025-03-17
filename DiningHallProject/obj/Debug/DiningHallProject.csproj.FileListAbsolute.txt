@@ -19,3 +19,4 @@ C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\Din
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.exe
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.pdb
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.CreateAccountForm.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.CreateAccountForm.resources
