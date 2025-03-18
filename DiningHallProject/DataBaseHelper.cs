@@ -41,35 +41,64 @@ namespace DiningHallProject
 
         public static void AddAccountToDB(string userID, string firstName, string lastName, string username, string password, string userEmail, int budget)
         {
-            string query = "INSERT INTO dbo.Students (userID, username, userPassword, userEmail, balance, firstName, lastName) " +
-                           "VALUES (@UserID, @Username, @Password, @UserEmail, @Budget, @FirstName, @LastName);";
+            string connectionString = "Server=tcp:dininghallsql.database.windows.net,1433;Initial Catalog=DiningHallSQLDatabase;Persist Security Info=False;User ID=SqlAdmin;Password=Dininghalladmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string query = "INSERT INTO dbo.Students (userID,username, userPassword, userEmail, balance, firstName, lastName)" +
+                "Values('" + userID + "', '" + username + "', '" + password + "', '" + userEmail + "'," + budget + ",'" + firstName + "', '" + lastName + "');";
 
             try
             {
-                using (SqlConnection connection = GetConnection())
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserID", userID);
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
-                        command.Parameters.AddWithValue("@UserEmail", userEmail);
-                        command.Parameters.AddWithValue("@Budget", budget);
-                        command.Parameters.AddWithValue("@FirstName", firstName);
-                        command.Parameters.AddWithValue("@LastName", lastName);
 
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(query, connection);
+                    if (UserExists(username, userEmail))
+                    {
+                        MessageBox.Show("User Already Exists. Please enter a different username and email");
+                    }
+                    else
+                    {
                         command.ExecuteNonQuery();
+                        Console.WriteLine("Account Created Successfully.");
                     }
                 }
-                MessageBox.Show("Account successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private static bool UserExists(string username, string userEmail)
+        {
+            string connectionString = "Server=tcp:dininghallsql.database.windows.net,1433;Initial Catalog=DiningHallSQLDatabase;Persist Security Info=False;User ID=SqlAdmin;Password=Dininghalladmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; 
+
+            // SQL query to verify the username and email
+            string query = "SELECT COUNT(*) FROM Students WHERE username = @username AND userEmail = @email";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@email", userEmail);
+
+                        int userExists = (int)cmd.ExecuteScalar(); // Executes the query and gets the count
+
+                        // If the query returns 1, the user exists; otherwise, it doesn't
+                        return userExists > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return false;
+                }
             }
         }
     }
 }
-
 
