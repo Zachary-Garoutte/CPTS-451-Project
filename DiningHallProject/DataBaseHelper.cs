@@ -11,12 +11,7 @@ namespace DiningHallProject
     class DatabaseHelper
     {
         private static string connectionString =
-            "Server=tcp:dininghallsql.database.windows.net,1433;" +
-            "Initial Catalog=DiningHallSQLDatabase;" +
-            "Encrypt=True;" +
-            "TrustServerCertificate=False;" +
-            "Connection Timeout=30;" +
-            "Authentication=Active Directory Interactive;";
+            "Server=tcp:dininghallsql.database.windows.net,1433;Initial Catalog=DiningHallSQLDatabase;Persist Security Info=False;User ID=SqlAdmin;Password=Dininghalladmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public static SqlConnection GetConnection()
         {
@@ -69,7 +64,24 @@ namespace DiningHallProject
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public System.Data.DataTable getMenuItems(int menuId)
+        {
+            string query = "SELECT item_name, item_desc, ingredients, price, calories, item_type FROM dbo.Menu WHERE available = 1 and menu_id = @Menu;";
+            using (SqlConnection con = GetConnection())
+            {
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                da.SelectCommand.Parameters.AddWithValue("@Menu", menuId);
+
+                System.Data.DataTable item_table = new System.Data.DataTable();
+                da.Fill(item_table);
+
+                return item_table;
+            }
+        }
+
     }
+
 }
 
 

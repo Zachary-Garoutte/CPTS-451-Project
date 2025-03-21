@@ -87,5 +87,16 @@ namespace DiningHallProject
                 MessageBox.Show($"Connection Failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 menusWindow = new Form4();
+            menusWindow.ShowDialog();
+        }
     }
 }
