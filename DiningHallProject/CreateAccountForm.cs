@@ -61,11 +61,6 @@ namespace DiningHallProject
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(UserNameText.Text))
-            {
-                MessageBox.Show("You must choose a username!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             if (string.IsNullOrWhiteSpace(PasswordText.Text) || PasswordText.Text != ConfirmText.Text)
             {
@@ -92,9 +87,23 @@ namespace DiningHallProject
             }
 
             int budget = 0;
-            if (plan1radial.Checked) budget = 1120;
-            else if (plan2radial.Checked) budget = 1475;
-            else if (plan3radial.Checked) budget = 1795;
+            int planID = 0;
+            if (plan1radial.Checked)
+            {
+                budget = 1120;
+                planID = 1;
+            }
+            else if (plan2radial.Checked)
+            {
+                budget = 1475;
+                planID = 2;
+            }
+
+            else if (plan3radial.Checked)
+            {
+                budget = 1795;
+                planID = 3;
+            }
             else
             {
                 MessageBox.Show("You must choose a meal plan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -104,9 +113,8 @@ namespace DiningHallProject
             try
             {
                 // Call DatabaseHelper to add account to the database
-                DatabaseHelper.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, UserNameText.Text, PasswordText.Text, StudentEmail.Text, budget);
+                DatabaseHelper.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, PasswordText.Text, StudentEmail.Text, PhoneText.Text, AdressText.Text, CityText.Text, DOBpicker.Value, "student", budget, planID);
 
-                MessageBox.Show("Account successfully created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)
@@ -115,6 +123,10 @@ namespace DiningHallProject
             }
         }
 
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
