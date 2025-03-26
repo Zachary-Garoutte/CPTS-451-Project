@@ -188,6 +188,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPage.Designer.cs">
+      <DependentUpon>adminPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBaseHelper.cs" />
     <Compile Include="DiningHallsData.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -229,6 +235,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminPage.resx">
+      <DependentUpon>adminPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </EmbeddedResource>

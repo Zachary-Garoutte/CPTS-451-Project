@@ -222,3 +222,4 @@ C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\bin\Debug\zh-
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHa.C7D94A99.Up2Date
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.Form4.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.adminPage.resources
