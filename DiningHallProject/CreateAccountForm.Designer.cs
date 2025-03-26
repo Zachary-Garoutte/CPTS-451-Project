@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UserNameText = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PasswordText = new System.Windows.Forms.TextBox();
             this.ConfirmLabel = new System.Windows.Forms.Label();
@@ -48,27 +46,16 @@
             this.firstName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lastName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.PhoneText = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.AdressText = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CityText = new System.Windows.Forms.TextBox();
+            this.DOBpicker = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // UserNameText
-            // 
-            this.UserNameText.Location = new System.Drawing.Point(208, 61);
-            this.UserNameText.Name = "UserNameText";
-            this.UserNameText.Size = new System.Drawing.Size(201, 22);
-            this.UserNameText.TabIndex = 0;
-            this.UserNameText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(12, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -124,7 +111,7 @@
             // 
             // StudentID
             // 
-            this.StudentID.Location = new System.Drawing.Point(206, 270);
+            this.StudentID.Location = new System.Drawing.Point(208, 270);
             this.StudentID.Name = "StudentID";
             this.StudentID.Size = new System.Drawing.Size(201, 22);
             this.StudentID.TabIndex = 6;
@@ -146,7 +133,7 @@
             // 
             // StudentEmail
             // 
-            this.StudentEmail.Location = new System.Drawing.Point(206, 316);
+            this.StudentEmail.Location = new System.Drawing.Point(208, 315);
             this.StudentEmail.Name = "StudentEmail";
             this.StudentEmail.Size = new System.Drawing.Size(201, 22);
             this.StudentEmail.TabIndex = 8;
@@ -157,7 +144,7 @@
             this.plan1radial.AutoSize = true;
             this.plan1radial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.plan1radial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.plan1radial.Location = new System.Drawing.Point(15, 394);
+            this.plan1radial.Location = new System.Drawing.Point(15, 553);
             this.plan1radial.Name = "plan1radial";
             this.plan1radial.Size = new System.Drawing.Size(157, 29);
             this.plan1radial.TabIndex = 10;
@@ -171,7 +158,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(10, 366);
+            this.label6.Location = new System.Drawing.Point(10, 525);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(249, 25);
             this.label6.TabIndex = 11;
@@ -182,7 +169,7 @@
             this.plan2radial.AutoSize = true;
             this.plan2radial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.plan2radial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.plan2radial.Location = new System.Drawing.Point(15, 429);
+            this.plan2radial.Location = new System.Drawing.Point(15, 588);
             this.plan2radial.Name = "plan2radial";
             this.plan2radial.Size = new System.Drawing.Size(157, 29);
             this.plan2radial.TabIndex = 12;
@@ -195,7 +182,7 @@
             this.plan3radial.AutoSize = true;
             this.plan3radial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.plan3radial.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.plan3radial.Location = new System.Drawing.Point(15, 464);
+            this.plan3radial.Location = new System.Drawing.Point(15, 623);
             this.plan3radial.Name = "plan3radial";
             this.plan3radial.Size = new System.Drawing.Size(157, 29);
             this.plan3radial.TabIndex = 13;
@@ -206,7 +193,7 @@
             // SubmitButton
             // 
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.SubmitButton.Location = new System.Drawing.Point(10, 499);
+            this.SubmitButton.Location = new System.Drawing.Point(10, 658);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(89, 26);
             this.SubmitButton.TabIndex = 14;
@@ -262,18 +249,121 @@
             // 
             // lastName
             // 
-            this.lastName.Location = new System.Drawing.Point(208, 229);
+            this.lastName.Location = new System.Drawing.Point(208, 225);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(201, 22);
             this.lastName.TabIndex = 18;
             this.lastName.UseWaitCursor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(10, 356);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(143, 25);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Phone Number";
+            this.label8.UseWaitCursor = true;
+            // 
+            // PhoneText
+            // 
+            this.PhoneText.Location = new System.Drawing.Point(208, 360);
+            this.PhoneText.Name = "PhoneText";
+            this.PhoneText.Size = new System.Drawing.Size(201, 22);
+            this.PhoneText.TabIndex = 20;
+            this.PhoneText.UseWaitCursor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(885, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "label9";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(10, 395);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label10.Size = new System.Drawing.Size(131, 25);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Street Adress";
+            this.label10.UseWaitCursor = true;
+            // 
+            // AdressText
+            // 
+            this.AdressText.Location = new System.Drawing.Point(208, 399);
+            this.AdressText.Name = "AdressText";
+            this.AdressText.Size = new System.Drawing.Size(201, 22);
+            this.AdressText.TabIndex = 23;
+            this.AdressText.UseWaitCursor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(8, 435);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label11.Size = new System.Drawing.Size(46, 25);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "City";
+            this.label11.UseWaitCursor = true;
+            // 
+            // CityText
+            // 
+            this.CityText.Location = new System.Drawing.Point(208, 439);
+            this.CityText.Name = "CityText";
+            this.CityText.Size = new System.Drawing.Size(201, 22);
+            this.CityText.TabIndex = 25;
+            this.CityText.UseWaitCursor = true;
+            // 
+            // DOBpicker
+            // 
+            this.DOBpicker.Location = new System.Drawing.Point(209, 481);
+            this.DOBpicker.Name = "DOBpicker";
+            this.DOBpicker.Size = new System.Drawing.Size(200, 22);
+            this.DOBpicker.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(10, 479);
+            this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label12.Size = new System.Drawing.Size(123, 25);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Date Of Birth";
+            this.label12.UseWaitCursor = true;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // CreateAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1237, 579);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.DOBpicker);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.CityText);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.AdressText);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.PhoneText);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lastName);
             this.Controls.Add(this.label3);
@@ -292,8 +382,6 @@
             this.Controls.Add(this.ConfirmText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PasswordText);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.UserNameText);
             this.Name = "CreateAccountForm";
             this.Text = "Create Account";
             this.Load += new System.EventHandler(this.CreateAccountForm_Load);
@@ -303,9 +391,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox UserNameText;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox PasswordText;
         private System.Windows.Forms.Label ConfirmLabel;
@@ -324,5 +409,14 @@
         private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox PhoneText;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox AdressText;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox CityText;
+        private System.Windows.Forms.DateTimePicker DOBpicker;
+        private System.Windows.Forms.Label label12;
     }
 }

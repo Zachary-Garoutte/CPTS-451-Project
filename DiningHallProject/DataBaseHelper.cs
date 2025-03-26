@@ -34,27 +34,45 @@ namespace DiningHallProject
             }
         }
 
-        public static void AddAccountToDB(string userID, string firstName, string lastName, string username, string password, string userEmail, int budget)
+        public static void AddAccountToDB(string userID, string firstName, string lastName, string password, string userEmail, string phoneNumber, string adress, string city, DateTime DOB, string userRole, int balance, int planID)
         {
-            string query = "INSERT INTO dbo.Students (userID, username, userPassword, userEmail, balance, firstName, lastName) " +
-                           "VALUES (@UserID, @Username, @Password, @UserEmail, @Budget, @FirstName, @LastName);";
+            string query1 = "INSERT INTO dbo.Users (user_id, userPassword, userEmail, phone, DOB, first_name, last_name, streetAdress, city, userRole, last_login) " +
+                           "VALUES (@UserID, @Password, @UserEmail, @Phone, @DOB, @FirstName, @LastName, @Adress, @City, @userRole, @LastLogin);";
+
+            string query2 = "INSERT INTO dbo.Student (user_id, balance, plan_id) " +
+                           "VALUES (@UserID, @Balance, @PlanID);";
 
             try
             {
                 using (SqlConnection connection = GetConnection())
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query1, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", userID);
-                        command.Parameters.AddWithValue("@Username", username);
                         command.Parameters.AddWithValue("@Password", password);
                         command.Parameters.AddWithValue("@UserEmail", userEmail);
-                        command.Parameters.AddWithValue("@Budget", budget);
+                        command.Parameters.AddWithValue("@Phone", phoneNumber);
                         command.Parameters.AddWithValue("@FirstName", firstName);
                         command.Parameters.AddWithValue("@LastName", lastName);
+                        command.Parameters.AddWithValue("@DOB", DOB);
+                        command.Parameters.AddWithValue("@Adress", adress);
+                        command.Parameters.AddWithValue("@City", city);
+                        command.Parameters.AddWithValue("@userRole", userRole);
+                        command.Parameters.AddWithValue("@LastLogin", (object)DBNull.Value);
+
 
                         command.ExecuteNonQuery();
+                    }
+
+                    using (SqlCommand command2 = new SqlCommand(query2, connection))
+                    {
+                        command2.Parameters.AddWithValue("@UserID", userID);
+                        command2.Parameters.AddWithValue("@Balance", balance);
+                        command2.Parameters.AddWithValue("@PlanID", planID);
+
+
+                        command2.ExecuteNonQuery();
                     }
                 }
                 MessageBox.Show("Account successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
