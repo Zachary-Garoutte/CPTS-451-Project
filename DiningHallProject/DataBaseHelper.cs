@@ -65,14 +65,17 @@ namespace DiningHallProject
                         command.ExecuteNonQuery();
                     }
 
-                    using (SqlCommand command2 = new SqlCommand(query2, connection))
+                    if (userRole == "student")
                     {
-                        command2.Parameters.AddWithValue("@UserID", userID);
-                        command2.Parameters.AddWithValue("@Balance", balance);
-                        command2.Parameters.AddWithValue("@PlanID", planID);
+                        using (SqlCommand command2 = new SqlCommand(query2, connection))
+                        {
+                            command2.Parameters.AddWithValue("@UserID", userID);
+                            command2.Parameters.AddWithValue("@Balance", balance);
+                            command2.Parameters.AddWithValue("@PlanID", planID);
 
 
-                        command2.ExecuteNonQuery();
+                            command2.ExecuteNonQuery();
+                        }
                     }
                 }
                 MessageBox.Show("Account successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

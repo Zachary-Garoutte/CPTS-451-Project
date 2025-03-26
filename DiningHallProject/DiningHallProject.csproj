@@ -233,6 +233,12 @@
     <Compile Include="menus.Designer.cs">
       <DependentUpon>menus.cs</DependentUpon>
     </Compile>
+    <Compile Include="newAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newAdmin.Designer.cs">
+      <DependentUpon>newAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="adminPage.resx">
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menus.resx">
       <DependentUpon>menus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newAdmin.resx">
+      <DependentUpon>newAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

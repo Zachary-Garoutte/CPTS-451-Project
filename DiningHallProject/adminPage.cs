@@ -20,7 +20,8 @@ namespace DiningHallProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            newAdmin newAdminForm = new newAdmin();
+            newAdminForm.ShowDialog();
         }
     }
 }
