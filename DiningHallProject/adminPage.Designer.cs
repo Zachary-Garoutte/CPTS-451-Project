@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.CreateNewAdmin = new System.Windows.Forms.Button();
             this.EditMenus = new System.Windows.Forms.Button();
             this.EditHalls = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.EditMenus.TabIndex = 1;
             this.EditMenus.Text = "Edit Menus";
             this.EditMenus.UseVisualStyleBackColor = true;
+            this.EditMenus.Click += new System.EventHandler(this.EditMenus_Click);
             // 
             // EditHalls
             // 
@@ -64,6 +64,7 @@
             this.EditHalls.TabIndex = 2;
             this.EditHalls.Text = "Edit Dining Halls";
             this.EditHalls.UseVisualStyleBackColor = true;
+            this.EditHalls.Click += new System.EventHandler(this.EditHalls_Click);
             // 
             // adminPage
             // 
@@ -71,14 +72,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-
             this.Controls.Add(this.EditHalls);
             this.Controls.Add(this.EditMenus);
             this.Controls.Add(this.CreateNewAdmin);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "adminPage";
             this.Text = "Admin Page";
-
+            this.ResumeLayout(false);
 
         }
 

@@ -224,3 +224,7 @@ C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\Din
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.adminPage.resources
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.Form4.resources
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.newAdmin.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.editMenu.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.editItem.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.hallEditor.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.editHall.resources

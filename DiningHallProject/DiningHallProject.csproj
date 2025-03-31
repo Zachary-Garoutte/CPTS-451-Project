@@ -215,6 +215,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiningHallSQLDatabaseDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="editHall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editHall.Designer.cs">
+      <DependentUpon>editHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editItem.Designer.cs">
+      <DependentUpon>editItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editMenu.Designer.cs">
+      <DependentUpon>editMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +244,12 @@
     </Compile>
     <Compile Include="CreateAccountForm.Designer.cs">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hallEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hallEditor.Designer.cs">
+      <DependentUpon>hallEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="menus.cs">
       <SubType>Form</SubType>
@@ -247,8 +271,20 @@
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="editHall.resx">
+      <DependentUpon>editHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editItem.resx">
+      <DependentUpon>editItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editMenu.resx">
+      <DependentUpon>editMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hallEditor.resx">
+      <DependentUpon>hallEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menus.resx">
       <DependentUpon>menus.cs</DependentUpon>
