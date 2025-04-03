@@ -51,11 +51,35 @@ namespace DiningHallProject
 
         private void Login(object sender, EventArgs e)
         {
-            // 'username' needs to change to 'email'
-            if (userName.Text != string.Empty && password.Text != string.Empty)
+            string email = userName.Text.Trim();
+            string pwd = password.Text.Trim();
+
+            if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(pwd))
             {
                 UserRepository userRepository = new UserRepository();
-                userRepository.Login(userName.Text, password.Text);
+                bool success = userRepository.Login(email, pwd);
+
+                if (success)
+                {
+                    DatabaseHelper database = new DatabaseHelper();
+                    string role = database.getUserRole(email);
+
+                    if (role == "admin")
+                    {
+                        adminPage adminPage = new adminPage();
+                        adminPage.ShowDialog();
+                    }
+                    else
+                    {
+                        UserMainMenu userHome = new UserMainMenu(email);
+                        userHome.Show();
+                        this.Hide(); // Hide login screen
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid login credentials.");
+                }
             }
             else
             {
@@ -89,6 +113,16 @@ namespace DiningHallProject
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 menusWindow = new Form4();
+            menusWindow.ShowDialog();
+        }
         private void userName_TextChanged_1(object sender, EventArgs e)
         {
 

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DiningHallSQLDatabaseDataSet1" targetNamespace="http://tempuri.org/DiningHallSQLDatabaseDataSet1.xsd" xmlns:mstns="http://tempuri.org/DiningHallSQLDatabaseDataSet1.xsd" xmlns="http://tempuri.org/DiningHallSQLDatabaseDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiningHallSQLDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiningHallSQLDatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiningHallProject.Properties.Settings.GlobalReference.Default.DiningHallSQLDatabaseConnectionString" Provider="Microsoft.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MenuTableAdapter" GeneratorDataComponentClassName="MenuTableAdapter" Name="Menu" UserDataComponentName="MenuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DiningHallSQLDatabaseConnectionString (Settings)" DbObjectName="DiningHallSQLDatabase.dbo.Menu" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT item_name, item_desc, ingredients, price, calories, item_type FROM dbo.Menu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="item_name" DataSetColumn="item_name" />
+              <Mapping SourceColumn="item_desc" DataSetColumn="item_desc" />
+              <Mapping SourceColumn="ingredients" DataSetColumn="ingredients" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="calories" DataSetColumn="calories" />
+              <Mapping SourceColumn="item_type" DataSetColumn="item_type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DiningHallSQLDatabaseDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="DiningHallSQLDatabaseDataSet1" msprop:Generator_DataSetName="DiningHallSQLDatabaseDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Menu" msprop:Generator_RowEvHandlerName="MenuRowChangeEventHandler" msprop:Generator_RowDeletedName="MenuRowDeleted" msprop:Generator_RowDeletingName="MenuRowDeleting" msprop:Generator_RowEvArgName="MenuRowChangeEvent" msprop:Generator_TablePropName="Menu" msprop:Generator_RowChangedName="MenuRowChanged" msprop:Generator_RowChangingName="MenuRowChanging" msprop:Generator_TableClassName="MenuDataTable" msprop:Generator_RowClassName="MenuRow" msprop:Generator_TableVarName="tableMenu" msprop:Generator_UserTableName="Menu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item_name" msprop:Generator_ColumnPropNameInRow="item_name" msprop:Generator_ColumnPropNameInTable="item_nameColumn" msprop:Generator_ColumnVarNameInTable="columnitem_name" msprop:Generator_UserColumnName="item_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="item_desc" msprop:Generator_ColumnPropNameInRow="item_desc" msprop:Generator_ColumnPropNameInTable="item_descColumn" msprop:Generator_ColumnVarNameInTable="columnitem_desc" msprop:Generator_UserColumnName="item_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ingredients" msprop:Generator_ColumnPropNameInRow="ingredients" msprop:Generator_ColumnPropNameInTable="ingredientsColumn" msprop:Generator_ColumnVarNameInTable="columningredients" msprop:Generator_UserColumnName="ingredients" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_UserColumnName="price" type="xs:float" minOccurs="0" />
+              <xs:element name="calories" msprop:Generator_ColumnPropNameInRow="calories" msprop:Generator_ColumnPropNameInTable="caloriesColumn" msprop:Generator_ColumnVarNameInTable="columncalories" msprop:Generator_UserColumnName="calories" type="xs:int" minOccurs="0" />
+              <xs:element name="item_type" msprop:Generator_ColumnPropNameInRow="item_type" msprop:Generator_ColumnPropNameInTable="item_typeColumn" msprop:Generator_ColumnVarNameInTable="columnitem_type" msprop:Generator_UserColumnName="item_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

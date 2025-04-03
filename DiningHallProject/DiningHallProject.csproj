@@ -188,7 +188,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPage.Designer.cs">
+      <DependentUpon>adminPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBaseHelper.cs" />
+    <Compile Include="DiningHallsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DiningHallSQLDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallSQLDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DiningHallSQLDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallSQLDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DiningHallSQLDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallSQLDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="editHall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editHall.Designer.cs">
+      <DependentUpon>editHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editItem.Designer.cs">
+      <DependentUpon>editItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editMenu.Designer.cs">
+      <DependentUpon>editMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +245,41 @@
     <Compile Include="CreateAccountForm.Designer.cs">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountModificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountModificationForm.Designer.cs">
+      <DependentUpon>AccountModificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMainMenu.Designer.cs">
+      <DependentUpon>UserMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hallEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hallEditor.Designer.cs">
+      <DependentUpon>hallEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menus.Designer.cs">
+      <DependentUpon>menus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newAdmin.Designer.cs">
+      <DependentUpon>newAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminPage.resx">
+      <DependentUpon>adminPage.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="PasswordHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,8 +287,26 @@
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="editHall.resx">
+      <DependentUpon>editHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editItem.resx">
+      <DependentUpon>editItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editMenu.resx">
+      <DependentUpon>editMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hallEditor.resx">
+      <DependentUpon>hallEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menus.resx">
+      <DependentUpon>menus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newAdmin.resx">
+      <DependentUpon>newAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,6 +317,53 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserMainMenu.resx">
+      <DependentUpon>UserMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DiningHallsData.xsc">
+      <DependentUpon>DiningHallsData.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallsData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallsData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallsData.xss">
+      <DependentUpon>DiningHallsData.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet.xsc">
+      <DependentUpon>DiningHallSQLDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallSQLDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet.xss">
+      <DependentUpon>DiningHallSQLDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet1.xsc">
+      <DependentUpon>DiningHallSQLDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallSQLDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet1.xss">
+      <DependentUpon>DiningHallSQLDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet2.xsc">
+      <DependentUpon>DiningHallSQLDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallSQLDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet2.xss">
+      <DependentUpon>DiningHallSQLDatabaseDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
