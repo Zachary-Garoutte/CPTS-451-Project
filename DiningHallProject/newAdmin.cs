@@ -30,7 +30,7 @@ namespace DiningHallProject
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            DatabaseHelper.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, "New Admin", StudentEmail.Text, PhoneText.Text, AdressText.Text, CityText.Text, DOBpicker.Value, "admin", 0, 0);
+            DatabaseHelper.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, "NewAdmin", StudentEmail.Text, PhoneText.Text, AdressText.Text, CityText.Text, DOBpicker.Value, "admin", 0, 0);
 
             this.Close();
         }

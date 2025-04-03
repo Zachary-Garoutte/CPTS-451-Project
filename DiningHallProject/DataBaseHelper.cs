@@ -82,14 +82,17 @@ namespace DiningHallProject
                         else
                         {
                             command.ExecuteNonQuery();
-                            using (SqlCommand command2 = new SqlCommand(query2, connection))
+                            if (userRole == "student")
                             {
-                                command2.Parameters.AddWithValue("@UserID", userID);
-                                command2.Parameters.AddWithValue("@Balance", balance);
-                                command2.Parameters.AddWithValue("@PlanID", planID);
+                                using (SqlCommand command2 = new SqlCommand(query2, connection))
+                                {
+                                    command2.Parameters.AddWithValue("@UserID", userID);
+                                    command2.Parameters.AddWithValue("@Balance", balance);
+                                    command2.Parameters.AddWithValue("@PlanID", planID);
 
 
-                                command2.ExecuteNonQuery();
+                                    command2.ExecuteNonQuery();
+                                }
                             }
                             Console.WriteLine("Account Created Successfully.");
                         }
@@ -129,6 +132,32 @@ namespace DiningHallProject
                 {
                     MessageBox.Show("Error: " + ex.Message);
                     return false;
+                }
+            }
+        }
+
+        public string getUserRole(string userEmail)
+        {
+            string query = "SELECT userRole from dbo.Users WHERE userEmail = @Email;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@email", userEmail);
+
+                        object role = cmd.ExecuteScalar(); // Executes the query and gets the count
+
+                        return role.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
                 }
             }
         }

@@ -59,6 +59,7 @@ namespace DiningHallProject
                     else
                     {
                         MessageBox.Show("Incorrect Password");
+                        return false;
                     }
                 } 
                 catch (Exception ex)

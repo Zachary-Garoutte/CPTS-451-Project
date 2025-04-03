@@ -87,6 +87,5 @@
         private System.Windows.Forms.Button CreateNewAdmin;
         private System.Windows.Forms.Button EditMenus;
         private System.Windows.Forms.Button EditHalls;
-
     }
 }

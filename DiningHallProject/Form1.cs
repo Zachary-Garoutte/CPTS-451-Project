@@ -55,7 +55,16 @@ namespace DiningHallProject
             if (userName.Text != string.Empty && password.Text != string.Empty)
             {
                 UserRepository userRepository = new UserRepository();
-                userRepository.Login(userName.Text, password.Text);
+                if (userRepository.Login(userName.Text, password.Text) == true)
+                {
+                    DatabaseHelper database = new DatabaseHelper();
+                    if (database.getUserRole(userName.Text) == "admin")
+                    {
+                        adminPage adminPage = new adminPage();
+                        adminPage.ShowDialog();
+                        
+                    }
+                }
             }
             else
             {
@@ -98,12 +107,6 @@ namespace DiningHallProject
         {
             Form4 menusWindow = new Form4();
             menusWindow.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            adminPage adminPage = new adminPage();
-            adminPage.ShowDialog();
         }
         private void userName_TextChanged_1(object sender, EventArgs e)
         {
