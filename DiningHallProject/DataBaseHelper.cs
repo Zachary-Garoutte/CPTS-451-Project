@@ -42,10 +42,14 @@ namespace DiningHallProject
         public static void AddAccountToDB(string userID, string firstName, string lastName, string password, string userEmail, string phoneNumber, string adress, string city, DateTime DOB, string userRole, int balance, int planID)
         {
             string query1 = "INSERT INTO dbo.Users (user_id, userPassword, userEmail, phone, DOB, first_name, last_name, streetAdress, city, userRole, last_login) " +
-                           "VALUES (@UserID, @Password, @UserEmail, @Phone, @DOB, @FirstName, @LastName, @Adress, @City, @userRole, @LastLogin);";
+                           "VALUES (@UserID, @Password, @UserEmail, @Phone, @DOB, @FirstName, @LastName, @Adress, @City, @userRole, @LastLogin, @Salt);";
 
             string query2 = "INSERT INTO dbo.Student (user_id, balance, plan_id) " +
                            "VALUES (@UserID, @Balance, @PlanID);";
+
+            // Handle Password Hashing
+            PasswordHandler handler = new PasswordHandler();
+            string hashedPassword = handler.HashPassword($"{handler.Salt}{password}");
 
             try
             {
@@ -55,7 +59,7 @@ namespace DiningHallProject
                     using (SqlCommand command = new SqlCommand(query1, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", userID);
-                        command.Parameters.AddWithValue("@Password", password);
+                        command.Parameters.AddWithValue("@Password", hashedPassword);
                         command.Parameters.AddWithValue("@UserEmail", userEmail);
                         command.Parameters.AddWithValue("@Phone", phoneNumber);
                         command.Parameters.AddWithValue("@FirstName", firstName);
@@ -65,6 +69,7 @@ namespace DiningHallProject
                         command.Parameters.AddWithValue("@City", city);
                         command.Parameters.AddWithValue("@userRole", userRole);
                         command.Parameters.AddWithValue("@LastLogin", (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@Salt", handler.Salt);
 
 
                         command.ExecuteNonQuery();
