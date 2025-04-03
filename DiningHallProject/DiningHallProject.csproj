@@ -245,6 +245,18 @@
     <Compile Include="CreateAccountForm.Designer.cs">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountModificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountModificationForm.Designer.cs">
+      <DependentUpon>AccountModificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMainMenu.Designer.cs">
+      <DependentUpon>UserMainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="hallEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +317,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserMainMenu.resx">
+      <DependentUpon>UserMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DiningHallsData.xsc">
       <DependentUpon>DiningHallsData.xsd</DependentUpon>
     </None>
