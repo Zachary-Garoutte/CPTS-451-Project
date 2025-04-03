@@ -58,9 +58,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(149, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(57, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Username";
+            this.label2.Text = "Email";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
@@ -80,6 +80,7 @@
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(212, 20);
             this.userName.TabIndex = 3;
+            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged_1);
             // 
             // password
             // 

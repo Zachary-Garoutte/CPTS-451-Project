@@ -51,10 +51,11 @@ namespace DiningHallProject
 
         private void Login(object sender, EventArgs e)
         {
-
+            // 'username' needs to change to 'email'
             if (userName.Text != string.Empty && password.Text != string.Empty)
             {
-                MessageBox.Show("Login Successful!");
+                UserRepository userRepository = new UserRepository();
+                userRepository.Login(userName.Text, password.Text);
             }
             else
             {
@@ -86,6 +87,11 @@ namespace DiningHallProject
             {
                 MessageBox.Show($"Connection Failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void userName_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

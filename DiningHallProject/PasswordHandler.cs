@@ -35,7 +35,6 @@ namespace DiningHallProject
             SHA256 hash = SHA256.Create();
             var passwordBytes = Encoding.Default.GetBytes(password);
             var hashedPassword = hash.ComputeHash(passwordBytes);
-            Console.WriteLine(Convert.ToBase64String(hashedPassword));
             return Convert.ToBase64String(hashedPassword);
 
         }

@@ -50,7 +50,6 @@ namespace DiningHallProject
             // Handle Password Hashing
             PasswordHandler handler = new PasswordHandler();
             string hashedPassword = handler.HashPassword($"{handler.Salt}{password}");
-            Console.WriteLine($"HASHED: {hashedPassword}");
 
             try
             {
@@ -99,8 +98,9 @@ namespace DiningHallProject
             }
         }
 
-        private static bool UserExists(string userEmail)
+        public static bool UserExists(string userEmail)
         {
+            //Change connection strings eventually not use sensitive information. CUrrently in use for development
             string connectionString = "Server=tcp:dininghallsql.database.windows.net,1433;Initial Catalog=DiningHallSQLDatabase;Persist Security Info=False;User ID=SqlAdmin;Password=Dininghalladmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; 
 
             // SQL query to verify the username and email
