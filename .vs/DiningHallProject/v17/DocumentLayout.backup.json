@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\CPTS451\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|c:\\cpts451\\dininghallproject\\accountmodificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\accountmodificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CPTS451\\DiningHallProject\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DiningHallProject\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\usermainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\usermainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\accountmodificationform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,28 +31,12 @@
       "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\accountmodificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\usermainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\usermainmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\usermainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CPTS451\\DiningHallProject\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DiningHallProject\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\CPTS451\\dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,68 +81,72 @@
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AccountModificationForm.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\AccountModificationForm.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\AccountModificationForm.cs",
               "ToolTip": "C:\\CPTS451\\DiningHallProject\\AccountModificationForm.cs",
               "RelativeToolTip": "DiningHallProject\\AccountModificationForm.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowGYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T20:18:23.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\Form2.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\Form2.cs",
               "ToolTip": "C:\\CPTS451\\DiningHallProject\\Form2.cs",
               "RelativeToolTip": "DiningHallProject\\Form2.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T20:45:50.785Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "WhenOpened": "2025-04-03T20:45:50.785Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "UserMainMenu.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\UserMainMenu.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\UserMainMenu.cs",
               "ToolTip": "C:\\CPTS451\\DiningHallProject\\UserMainMenu.cs",
               "RelativeToolTip": "DiningHallProject\\UserMainMenu.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAvwCgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T19:37:52.19Z"
+              "WhenOpened": "2025-04-03T19:37:52.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserMainMenu.Designer.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\UserMainMenu.Designer.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\UserMainMenu.Designer.cs",
               "ToolTip": "C:\\CPTS451\\DiningHallProject\\UserMainMenu.Designer.cs",
               "RelativeToolTip": "DiningHallProject\\UserMainMenu.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T20:17:27.104Z"
+              "WhenOpened": "2025-04-03T20:17:27.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserMainMenu.cs [Design]",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\UserMainMenu.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\UserMainMenu.cs",
               "ToolTip": "C:\\CPTS451\\DiningHallProject\\UserMainMenu.cs [Design]",
               "RelativeToolTip": "DiningHallProject\\UserMainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T19:33:56.458Z"
+              "WhenOpened": "2025-04-03T19:33:56.458Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -157,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\Form1.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\Form1.cs",
@@ -169,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "AccountModificationForm.cs [Design]",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\AccountModificationForm.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\AccountModificationForm.cs",
@@ -180,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\UserRepository.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\UserRepository.cs",
@@ -192,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AccountModificationForm.Designer.cs",
               "DocumentMoniker": "C:\\CPTS451\\DiningHallProject\\AccountModificationForm.Designer.cs",
               "RelativeDocumentMoniker": "DiningHallProject\\AccountModificationForm.Designer.cs",
