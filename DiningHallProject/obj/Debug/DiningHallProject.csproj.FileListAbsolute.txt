@@ -221,6 +221,13 @@ C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\bin\Debug\tr\
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHa.C7D94A99.Up2Date
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.adminPage.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.Form4.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.newAdmin.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.editMenu.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.editItem.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.hallEditor.resources
+C:\Users\jatwo\Documents\GitHub\CPTS-451-Project\DiningHallProject\obj\Debug\DiningHallProject.editHall.resources
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\bin\Debug\Azure.Core.dll
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\bin\Debug\Azure.Identity.dll
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll

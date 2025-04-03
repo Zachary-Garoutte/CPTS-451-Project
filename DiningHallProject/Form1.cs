@@ -89,6 +89,22 @@ namespace DiningHallProject
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 menusWindow = new Form4();
+            menusWindow.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            adminPage adminPage = new adminPage();
+            adminPage.ShowDialog();
+        }
         private void userName_TextChanged_1(object sender, EventArgs e)
         {
 
