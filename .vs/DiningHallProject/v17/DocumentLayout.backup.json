@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|c:\\users\\luisg\\source\\repos\\dininghallproject\\dininghallproject\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|c:\\users\\luisg\\source\\repos\\dininghallproject\\dininghallproject\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|c:\\users\\luisg\\source\\repos\\dininghallproject\\dininghallproject\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|C:\\Users\\luisg\\source\\repos\\DiningHallProject\\dininghallproject\\passwordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\passwordhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\luisg\\AppData\\Local\\Temp\\5d0ztijb..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|c:\\users\\luisg\\source\\repos\\dininghallproject\\dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|c:\\users\\luisg\\source\\repos\\dininghallproject\\dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2CCDC77-996E-4119-8C4C-9CF3D7FD8602}|DiningHallProject\\DiningHallProject.csproj|solutionrelative:dininghallproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\luisg\\AppData\\Local\\Temp\\5d0ztijb..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\luisg\\AppData\\Local\\Temp\\5d0ztijb..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\luisg\\AppData\\Local\\Temp\\5d0ztijb..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\5d0ztijb..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-03T10:23:43.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "DiningHallProject\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\Form1.Designer.cs",
+              "RelativeToolTip": "DiningHallProject\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:20:55.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\Form1.cs",
+              "RelativeDocumentMoniker": "DiningHallProject\\Form1.cs",
+              "ToolTip": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\Form1.cs",
+              "RelativeToolTip": "DiningHallProject\\Form1.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:21:01.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\Form1.cs",
+              "RelativeDocumentMoniker": "DiningHallProject\\Form1.cs",
+              "ToolTip": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\Form1.cs [Design]",
+              "RelativeToolTip": "DiningHallProject\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T10:20:59.088Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DiningHallProject\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\UserRepository.cs*",
+              "RelativeToolTip": "DiningHallProject\\UserRepository.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:56:45.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataBaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\DataBaseHelper.cs",
+              "RelativeDocumentMoniker": "DiningHallProject\\DataBaseHelper.cs",
+              "ToolTip": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\DataBaseHelper.cs",
+              "RelativeToolTip": "DiningHallProject\\DataBaseHelper.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAlwFkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:18:53.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PasswordHandler.cs",
+              "DocumentMoniker": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\PasswordHandler.cs",
+              "RelativeDocumentMoniker": "DiningHallProject\\PasswordHandler.cs",
+              "ToolTip": "C:\\Users\\luisg\\source\\repos\\DiningHallProject\\DiningHallProject\\PasswordHandler.cs",
+              "RelativeToolTip": "DiningHallProject\\PasswordHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:41:29.92Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
