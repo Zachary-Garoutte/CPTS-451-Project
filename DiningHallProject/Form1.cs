@@ -98,5 +98,11 @@ namespace DiningHallProject
             Form4 menusWindow = new Form4();
             menusWindow.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            adminPage adminPage = new adminPage();
+            adminPage.ShowDialog();
+        }
     }
 }

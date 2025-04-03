@@ -37,6 +37,7 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +82,7 @@
             // userName
             // 
             this.userName.Location = new System.Drawing.Point(348, 146);
-            this.userName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userName.Margin = new System.Windows.Forms.Padding(4);
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(281, 22);
             this.userName.TabIndex = 3;
@@ -89,7 +90,7 @@
             // password
             // 
             this.password.Location = new System.Drawing.Point(348, 187);
-            this.password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(281, 22);
             this.password.TabIndex = 4;
@@ -97,7 +98,7 @@
             // CreateAccount
             // 
             this.CreateAccount.Location = new System.Drawing.Point(348, 230);
-            this.CreateAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CreateAccount.Margin = new System.Windows.Forms.Padding(4);
             this.CreateAccount.Name = "CreateAccount";
             this.CreateAccount.Size = new System.Drawing.Size(135, 28);
             this.CreateAccount.TabIndex = 5;
@@ -108,7 +109,7 @@
             // LoginButton
             // 
             this.LoginButton.Location = new System.Drawing.Point(496, 230);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(4);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(135, 28);
             this.LoginButton.TabIndex = 6;
@@ -119,7 +120,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(740, 401);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 28);
             this.button1.TabIndex = 7;
@@ -137,12 +138,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(916, 444);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LoginButton);
@@ -153,7 +165,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -173,6 +185,7 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
