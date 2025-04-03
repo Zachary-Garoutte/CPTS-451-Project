@@ -57,30 +57,28 @@ namespace DiningHallProject
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(pwd))
             {
                 UserRepository userRepository = new UserRepository();
-<<<<<<< HEAD
-                if (userRepository.Login(userName.Text, password.Text) == true)
-                {
-                    DatabaseHelper database = new DatabaseHelper();
-                    if (database.getUserRole(userName.Text) == "admin")
-                    {
-                        adminPage adminPage = new adminPage();
-                        adminPage.ShowDialog();
-                        
-                    }
-=======
                 bool success = userRepository.Login(email, pwd);
 
                 if (success)
                 {
-                    // Pass email (or user_id if you're using that instead)
-                    UserMainMenu userHome = new UserMainMenu(email);
-                    userHome.Show();
-                    this.Hide(); // Hide login screen
+                    DatabaseHelper database = new DatabaseHelper();
+                    string role = database.getUserRole(email);
+
+                    if (role == "admin")
+                    {
+                        adminPage adminPage = new adminPage();
+                        adminPage.ShowDialog();
+                    }
+                    else
+                    {
+                        UserMainMenu userHome = new UserMainMenu(email);
+                        userHome.Show();
+                        this.Hide(); // Hide login screen
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Invalid login credentials.");
->>>>>>> account-management-redo
                 }
             }
             else
