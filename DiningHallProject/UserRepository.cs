@@ -47,7 +47,6 @@ namespace DiningHallProject
                 try
                 {
                     PasswordHandler handler = new PasswordHandler();
-                    handler.Salt = storedSalt;
 
                     string attemptedHash = handler.HashPassword($"{storedSalt}{passwordEntered}");
                     if (attemptedHash.Equals(storedPassword))
