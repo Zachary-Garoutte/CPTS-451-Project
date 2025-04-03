@@ -1,19 +1,17 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System;
-using Microsoft.Data.SqlClient;
+﻿using System;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace DiningHallProject
 {
     public partial class AccountModificationForm : Form
     {
-        private string currentUserId;
+        private string currentUserEmail;
 
-        public AccountModificationForm(string userId)
+        public AccountModificationForm(string email)
         {
             InitializeComponent();
-            currentUserId = userId;
+            currentUserEmail = email;
             LoadUserData();
             LoadMealPlans();
         }
@@ -22,9 +20,9 @@ namespace DiningHallProject
         {
             using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
-                string query = "SELECT user_id, userPassword, userEmail, phone, DOB, first_name, last_name, streetAdress, city, userRole FROM Users WHERE user_id = @UserId";
+                string query = "SELECT userEmail FROM Users WHERE userEmail = @UserEmail";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@UserId", currentUserId);
+                cmd.Parameters.AddWithValue("@UserEmail", currentUserEmail);
 
                 try
                 {
@@ -33,8 +31,7 @@ namespace DiningHallProject
                     {
                         if (reader.Read())
                         {
-                            txtUsername.Text = reader["user_id"].ToString();
-                            // Don't fill in the password for security
+                            txtEmail.Text = reader["userEmail"].ToString(); // display email in textbox
                         }
                     }
                 }
@@ -49,19 +46,53 @@ namespace DiningHallProject
         {
             using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
-                string query = "SELECT plan_id, plan_name FROM MealPlans";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                string getCurrentPlanQuery = @"
+            SELECT S.plan_id
+            FROM Student S
+            JOIN Users U ON S.user_id = U.user_id
+            WHERE U.userEmail = @UserEmail";
+
+                string getAvailablePlansQuery = @"
+            SELECT plan_id, plan_name
+            FROM MealPlans
+            WHERE plan_id >= @CurrentPlanId";
 
                 try
                 {
                     conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    // Step 1: Get current plan_id
+                    SqlCommand getPlanCmd = new SqlCommand(getCurrentPlanQuery, conn);
+                    getPlanCmd.Parameters.AddWithValue("@UserEmail", currentUserEmail);
+                    object result = getPlanCmd.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        MessageBox.Show("Could not retrieve current plan.");
+                        return;
+                    }
+
+                    int currentPlanId = Convert.ToInt32(result);
+
+                    // Step 2: Get only equal or higher-tier plans
+                    SqlCommand getPlansCmd = new SqlCommand(getAvailablePlansQuery, conn);
+                    getPlansCmd.Parameters.AddWithValue("@CurrentPlanId", currentPlanId);
+
+                    SqlDataReader reader = getPlansCmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        cmbMealPlans.Items.Add(new ComboBoxItem(
+                        ComboBoxItem item = new ComboBoxItem(
                             reader["plan_name"].ToString(),
                             Convert.ToInt32(reader["plan_id"])
-                        ));
+                        );
+
+                        cmbMealPlans.Items.Add(item);
+
+                        // Step 3: Pre-select current plan
+                        if (item.Value == currentPlanId)
+                        {
+                            cmbMealPlans.SelectedItem = item;
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -73,11 +104,10 @@ namespace DiningHallProject
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            string newUserId = txtUsername.Text.Trim();
             string newPassword = txtPassword.Text.Trim();
             ComboBoxItem selectedPlan = cmbMealPlans.SelectedItem as ComboBoxItem;
 
-            if (string.IsNullOrEmpty(newUserId) || string.IsNullOrEmpty(newPassword) || selectedPlan == null)
+            if (string.IsNullOrEmpty(newPassword) || selectedPlan == null)
             {
                 MessageBox.Show("Please fill out all fields.");
                 return;
@@ -95,25 +125,22 @@ namespace DiningHallProject
                     transaction = conn.BeginTransaction();
 
                     // Update Users table
-                    string updateUser = "UPDATE Users SET user_id = @NewUserId, userPassword = @Password, Salt = @Salt WHERE user_id = @OldUserId";
+                    string updateUser = "UPDATE Users SET userPassword = @Password, Salt = @Salt WHERE userEmail = @UserEmail";
                     SqlCommand cmdUser = new SqlCommand(updateUser, conn, transaction);
-                    cmdUser.Parameters.AddWithValue("@NewUserId", newUserId);
                     cmdUser.Parameters.AddWithValue("@Password", hashedPassword);
                     cmdUser.Parameters.AddWithValue("@Salt", handler.Salt);
-                    cmdUser.Parameters.AddWithValue("@OldUserId", currentUserId);
+                    cmdUser.Parameters.AddWithValue("@UserEmail", currentUserEmail);
                     cmdUser.ExecuteNonQuery();
 
                     // Update Student table
-                    string updateStudent = "UPDATE Student SET user_id = @NewUserId, plan_id = @PlanId WHERE user_id = @OldUserId";
+                    string updateStudent = "UPDATE Student SET plan_id = @PlanId WHERE user_id = (SELECT user_id FROM Users WHERE userEmail = @UserEmail)";
                     SqlCommand cmdStudent = new SqlCommand(updateStudent, conn, transaction);
-                    cmdStudent.Parameters.AddWithValue("@NewUserId", newUserId);
                     cmdStudent.Parameters.AddWithValue("@PlanId", selectedPlan.Value);
-                    cmdStudent.Parameters.AddWithValue("@OldUserId", currentUserId);
+                    cmdStudent.Parameters.AddWithValue("@UserEmail", currentUserEmail);
                     cmdStudent.ExecuteNonQuery();
 
                     transaction.Commit();
                     MessageBox.Show("Account updated successfully.");
-                    currentUserId = newUserId;
                 }
                 catch (Exception ex)
                 {

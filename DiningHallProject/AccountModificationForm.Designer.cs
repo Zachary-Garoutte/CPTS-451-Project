@@ -13,8 +13,8 @@
 
         private void InitializeComponent()
         {
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblMealPlan = new System.Windows.Forms.Label();
@@ -22,17 +22,18 @@
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.SuspendLayout();
 
-            // lblUsername
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(30, 30);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(58, 13);
-            this.lblUsername.Text = "Username:";
+            // lblEmail
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(30, 30);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.Text = "Email:";
 
-            // txtUsername
-            this.txtUsername.Location = new System.Drawing.Point(150, 27);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 20);
+            // txtEmail
+            this.txtEmail.Location = new System.Drawing.Point(150, 27);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.ReadOnly = true;
 
             // lblPassword
             this.lblPassword.AutoSize = true;
@@ -70,8 +71,8 @@
 
             // AccountModificationForm
             this.ClientSize = new System.Drawing.Size(400, 220);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblMealPlan);
@@ -83,8 +84,8 @@
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblMealPlan;
