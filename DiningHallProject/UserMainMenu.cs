@@ -16,11 +16,13 @@ namespace DiningHallProject
     public partial class UserMainMenu: Form
     {
         private string currentUserEmail;
+        private int currentUserId; 
         public UserMainMenu(string email)
         {
             InitializeComponent();
             currentUserEmail = email;
             LoadUserDetails();
+            LoadMealHistory();
         }
 
         private void viewMenuButton_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace DiningHallProject
             using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
                 string query = @"
-            SELECT U.first_name, S.balance
+            SELECT U.user_id, U.first_name, S.balance
             FROM Users U
             JOIN Student S ON U.user_id = S.user_id
             WHERE U.userEmail = @Email";
@@ -54,11 +56,16 @@ namespace DiningHallProject
                     {
                         if (reader.Read())
                         {
+                            currentUserId = Convert.ToInt32(reader["user_id"]);  // <-- CRITICAL
                             string firstName = reader["first_name"].ToString();
                             decimal balance = Convert.ToDecimal(reader["balance"]);
 
                             lblWelcome.Text = $"Welcome, {firstName}!";
                             lblBalance.Text = $"Current Balance: ${balance:F2}";
+                        }
+                        else
+                        {
+                            MessageBox.Show("User not found for email: " + currentUserEmail);
                         }
                     }
                 }
@@ -67,6 +74,31 @@ namespace DiningHallProject
                     MessageBox.Show("Error loading user details: " + ex.Message);
                 }
             }
+        }
+
+        private void LoadMealHistory()
+        {
+            try
+            {
+                DataTable historyTable = DatabaseHelper.GetMealHistory(currentUserId);
+
+                if (historyTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("No meal history found for user ID: " + currentUserId);
+                }
+                else
+                {
+                    mealHistoryDataGridView.DataSource = historyTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading meal history: " + ex.Message);
+            }
+        }
+        private void mealHistoryDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

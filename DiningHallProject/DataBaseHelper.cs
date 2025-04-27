@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
@@ -362,6 +363,44 @@ namespace DiningHallProject
 
             }
             return maxMenuID;
+        }
+
+        // Add a new meal entry to the MealHistory table
+        public static void AddMealHistory(int userId, string diningHallName, string mealName)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                string query = "INSERT INTO MealHistory (UserID, DiningHallName, MealName) VALUES (@UserID, @DiningHallName, @MealName)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+                    cmd.Parameters.AddWithValue("@DiningHallName", diningHallName);
+                    cmd.Parameters.AddWithValue("@MealName", mealName);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Retrieve the meal history for a user
+        public static DataTable GetMealHistory(int userId)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                string query = "SELECT DiningHallName, MealName, MealDate FROM MealHistory WHERE UserID = @UserID ORDER BY MealDate DESC";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataTable mealHistoryTable = new DataTable();
+                        adapter.Fill(mealHistoryTable);
+                        return mealHistoryTable;
+                    }
+                }
+            }
         }
     }
 }

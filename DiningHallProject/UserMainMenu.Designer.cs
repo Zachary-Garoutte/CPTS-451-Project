@@ -21,6 +21,8 @@
             this.modifyAccountButton = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
+            this.mealHistoryDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.mealHistoryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // viewMenuButton
@@ -61,9 +63,18 @@
             this.lblBalance.ForeColor = System.Drawing.Color.White;
             this.lblBalance.Location = new System.Drawing.Point(20, 55);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(132, 21);
+            this.lblBalance.Size = new System.Drawing.Size(123, 21);
             this.lblBalance.TabIndex = 3;
             this.lblBalance.Text = "Current Balance:";
+            // 
+            // mealHistoryDataGridView
+            // 
+            this.mealHistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mealHistoryDataGridView.Location = new System.Drawing.Point(25, 79);
+            this.mealHistoryDataGridView.Name = "mealHistoryDataGridView";
+            this.mealHistoryDataGridView.Size = new System.Drawing.Size(763, 253);
+            this.mealHistoryDataGridView.TabIndex = 4;
+            this.mealHistoryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mealHistoryDataGridView_CellContentClick);
             // 
             // UserMainMenu
             // 
@@ -71,14 +82,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mealHistoryDataGridView);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.modifyAccountButton);
             this.Controls.Add(this.viewMenuButton);
             this.Name = "UserMainMenu";
             this.Text = "Form5";
+            ((System.ComponentModel.ISupportInitialize)(this.mealHistoryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -87,5 +101,6 @@
         private System.Windows.Forms.Button modifyAccountButton;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.DataGridView mealHistoryDataGridView;
     }
 }
