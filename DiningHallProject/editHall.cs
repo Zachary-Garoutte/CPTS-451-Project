@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DiningHallProject
 {
-    public partial class editHall : Form
+    public partial class editHall : DraggableForm
     {
         int diningHallID;
         int menuID;
@@ -49,6 +49,21 @@ namespace DiningHallProject
             {
                 database.AddHall(diningHallID, menuID, street.Text, city.Text, zip.Text, Convert.ToInt32(capacity.Value), name.Text);
             }
+            this.Close();
+        }
+
+        private void capacity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zip_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace DiningHallProject
 {
-    public partial class AccountModificationForm : Form
+    public partial class AccountModificationForm : DraggableForm
     {
         private string currentUserEmail;
 
@@ -173,6 +173,20 @@ namespace DiningHallProject
         }
 
         private void cmbMealPlans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }

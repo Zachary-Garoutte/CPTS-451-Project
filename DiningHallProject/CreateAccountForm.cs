@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DiningHallProject
 {
-    public partial class CreateAccountForm : Form
+    public partial class CreateAccountForm : DraggableForm
     {
         public CreateAccountForm()
         {
@@ -124,6 +124,26 @@ namespace DiningHallProject
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void CityText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PhoneText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstName_TextChanged(object sender, EventArgs e)
         {
 
         }
