@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
@@ -158,6 +159,32 @@ namespace DiningHallProject
                 {
                     MessageBox.Show("Error: " + ex.Message);
                     return null;
+                }
+            }
+        }
+
+        public int getUserID(string userEmail)
+        {
+            string query = "SELECT user_id from dbo.Users WHERE userEmail = @Email;";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@email", userEmail);
+
+                        object userID = cmd.ExecuteScalar();
+
+                        return Convert.ToInt32(userID);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return -1;
                 }
             }
         }
@@ -363,6 +390,180 @@ namespace DiningHallProject
             }
             return maxMenuID;
         }
+
+        public void updateBalance(int userID, double newBalance)
+        {
+            string query = "UPDATE dbo.Student SET balance = @Balance WHERE user_id = @UserID;";
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Balance", newBalance);
+                        command.Parameters.AddWithValue("@UserID", userID);
+
+                        command.ExecuteNonQuery();
+                    }
+
+                }
+                MessageBox.Show("Balance has been updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public double getCurrentBalance(int userID)
+        {
+            double balance = 0;
+            string query = "SELECT balance FROM Student WHERE user_id = @UserID;";
+
+            using (SqlConnection con = GetConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userID);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        balance = Convert.ToDouble(result);
+                    }
+                }
+
+            }
+            return balance;
+        }
+
+        public int getCurrentPlanID(int userID)
+        {
+            int planID = 0;
+            string query = "SELECT plan_id from Student WHERE user_id = @UserID;";
+
+            using (SqlConnection con = GetConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        planID = Convert.ToInt32(result);
+                    }
+                }
+
+            }
+            return planID;
+        }
+
+        public void updateCurrentPlanID(int planID,  int userID)
+        {
+            string query = "UPDATE dbo.Student SET plan_ID = @PlanID WHERE user_id = @UserID;";
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@PlanID", planID);
+                        command.Parameters.AddWithValue("@UserID", userID);
+
+                        command.ExecuteNonQuery();
+                    }
+
+                }
+                MessageBox.Show("Plan has been updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void updateTransactionHistory(int transactionID, int studentID, double amount, string paymentMethod, int hallID, DateTime dot)
+        {
+            string query1 = "INSERT INTO dbo.transactionHistory (TransID, studentID, amount, paymentMethod, dining_hall_id, dot)" +
+                            "VALUES(@TransID, @StudentID, @Amount, @PaymentMethod, @HallID, @DOT)";
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query1, connection))
+                    {
+                        command.Parameters.AddWithValue("@TransID", transactionID);
+                        command.Parameters.AddWithValue("@StudentID", studentID);
+                        command.Parameters.AddWithValue("@Amount", amount);
+                        command.Parameters.AddWithValue("@PaymentMethod", paymentMethod);
+                        if (hallID != 0)
+                        {
+                            command.Parameters.AddWithValue("@HallID", hallID);
+                        }
+                        else
+                        {
+                            command.Parameters.AddWithValue("@HallID", DBNull.Value);
+                        }
+                        command.Parameters.AddWithValue("@DOT", dot);
+
+                        command.ExecuteNonQuery();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public System.Data.DataTable getTransactionHistory(int userID)
+        {
+            string query = "SELECT t.amount, t.paymentMethod, t.dot, h.name FROM transactionHistory t LEFT JOIN diningHalls h on t.dining_hall_id = h.dining_hall_id WHERE studentID = @StudentID ORDER BY t.dot DESC;";
+            using (SqlConnection con = GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@StudentID", userID);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    System.Data.DataTable item_table = new System.Data.DataTable();
+                    da.Fill(item_table);
+
+                    return item_table;
+                }
+            }
+        }
+
+        public int getMaxTransactionID()
+        {
+            int maxMenuID = 0;
+            string query = "SELECT max(TransID) from dbo.transactionHistory;";
+
+            using (SqlConnection con = GetConnection())
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        maxMenuID = Convert.ToInt32(result);
+                    }
+                }
+
+            }
+            return maxMenuID;
+        }
     }
 }
+
+
+
 
