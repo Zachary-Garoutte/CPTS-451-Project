@@ -63,6 +63,7 @@ namespace DiningHallProject
                 {
                     DatabaseHelper database = new DatabaseHelper();
                     string role = database.getUserRole(email);
+                    int userID = database.getUserID(email);
 
                     if (role == "admin")
                     {
@@ -71,9 +72,8 @@ namespace DiningHallProject
                     }
                     else
                     {
-                        UserMainMenu userHome = new UserMainMenu(email);
+                        UserMainMenu userHome = new UserMainMenu(email, userID);
                         userHome.Show();
-                        this.Hide(); // Hide login screen
                     }
                 }
                 else

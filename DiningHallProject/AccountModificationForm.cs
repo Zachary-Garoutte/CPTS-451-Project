@@ -53,7 +53,7 @@ namespace DiningHallProject
             WHERE U.userEmail = @UserEmail";
 
                 string getAvailablePlansQuery = @"
-            SELECT plan_id, plan_name
+            SELECT plan_id, plan_name, price
             FROM MealPlans
             WHERE plan_id >= @CurrentPlanId";
 
@@ -85,6 +85,8 @@ namespace DiningHallProject
                             reader["plan_name"].ToString(),
                             Convert.ToInt32(reader["plan_id"])
                         );
+
+                        
 
                         cmbMealPlans.Items.Add(item);
 
@@ -140,6 +142,9 @@ namespace DiningHallProject
                     cmdStudent.ExecuteNonQuery();
 
                     transaction.Commit();
+
+                   
+
                     MessageBox.Show("Account updated successfully.");
                 }
                 catch (Exception ex)
@@ -165,6 +170,11 @@ namespace DiningHallProject
             {
                 return Text;
             }
+        }
+
+        private void cmbMealPlans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,10 +16,12 @@ namespace DiningHallProject
     public partial class UserMainMenu: Form
     {
         private string currentUserEmail;
-        public UserMainMenu(string email)
+        private int currentUserId;
+        public UserMainMenu(string email, int userID)
         {
             InitializeComponent();
             currentUserEmail = email;
+            currentUserId = userID;
             LoadUserDetails();
         }
 
@@ -67,6 +69,26 @@ namespace DiningHallProject
                     MessageBox.Show("Error loading user details: " + ex.Message);
                 }
             }
+        }
+
+        private void transHistory_Click(object sender, EventArgs e)
+        {
+            transactionHistroy transactionHistroy = new transactionHistroy(currentUserId);
+            transactionHistroy.ShowDialog();
+        }
+
+        private void charge_Click(object sender, EventArgs e)
+        {
+            TransactionHandler transactionHandler = new TransactionHandler();
+            transactionHandler.transaction(1, currentUserId, -1.00, "DemoCharge", System.DateTime.Now);
+            LoadUserDetails();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addFunds addFunds = new addFunds(currentUserId);
+            addFunds.ShowDialog();
+            LoadUserDetails();
         }
     }
 
