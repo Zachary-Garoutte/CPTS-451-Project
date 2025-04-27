@@ -11,7 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace DiningHallProject
 {
-    public partial class editItem : Form
+    public partial class editItem : DraggableForm
     {
         int menuID = 0;
         DataRow itemInfo;
@@ -129,6 +129,36 @@ namespace DiningHallProject
         }
 
         private void itemType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void availability_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ingredients_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void description_TextChanged(object sender, EventArgs e)
         {
 
         }

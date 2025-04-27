@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DiningHallProject
 {
-    public partial class hallEditor : Form
+    public partial class hallEditor : DraggableForm
     {
 
         DatabaseHelper database = new DatabaseHelper();
@@ -52,6 +52,21 @@ namespace DiningHallProject
 
             editHall hallEditor = new editHall(hallID, menuID, null);
             hallEditor.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -195,6 +195,11 @@
       <DependentUpon>adminPage.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseHelper.cs" />
+    <Compile Include="DiningHallNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallNames.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DiningHallsData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -215,6 +220,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiningHallSQLDatabaseDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DiningHallSQLDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallSQLDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DiningHallSQLDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiningHallSQLDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DraggableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="editHall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,11 +251,23 @@
     <Compile Include="editMenu.Designer.cs">
       <DependentUpon>editMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ViewFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ViewFeedback.Designer.cs">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFeedback.Designer.cs">
+      <DependentUpon>NewFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateAccountForm.cs">
       <SubType>Form</SubType>
@@ -250,6 +280,12 @@
     </Compile>
     <Compile Include="AccountModificationForm.Designer.cs">
       <DependentUpon>AccountModificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackMenu.Designer.cs">
+      <DependentUpon>FeedbackMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="UserMainMenu.cs">
       <SubType>Form</SubType>
@@ -277,6 +313,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountModificationForm.resx">
+      <DependentUpon>AccountModificationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminPage.resx">
       <DependentUpon>adminPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,8 +335,14 @@
     <EmbeddedResource Include="editMenu.resx">
       <DependentUpon>editMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="NewFeedback.resx">
+      <DependentUpon>NewFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackMenu.resx">
+      <DependentUpon>FeedbackMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hallEditor.resx">
       <DependentUpon>hallEditor.cs</DependentUpon>
@@ -320,6 +365,20 @@
     <EmbeddedResource Include="UserMainMenu.resx">
       <DependentUpon>UserMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewFeedback.resx">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DiningHallNames.xsc">
+      <DependentUpon>DiningHallNames.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallNames.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallNames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallNames.xss">
+      <DependentUpon>DiningHallNames.xsd</DependentUpon>
+    </None>
     <None Include="DiningHallsData.xsc">
       <DependentUpon>DiningHallsData.xsd</DependentUpon>
     </None>
@@ -363,6 +422,28 @@
     </None>
     <None Include="DiningHallSQLDatabaseDataSet2.xss">
       <DependentUpon>DiningHallSQLDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet3.xsc">
+      <DependentUpon>DiningHallSQLDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallSQLDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet3.xss">
+      <DependentUpon>DiningHallSQLDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet4.xsc">
+      <DependentUpon>DiningHallSQLDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiningHallSQLDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DiningHallSQLDatabaseDataSet4.xss">
+      <DependentUpon>DiningHallSQLDatabaseDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

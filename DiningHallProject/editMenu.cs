@@ -11,7 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DiningHallProject
 {
-    public partial class editMenu : Form
+    public partial class editMenu : DraggableForm
     {
         public editMenu()
         {
@@ -83,6 +83,11 @@ namespace DiningHallProject
 
             editItem itemEditor = new editItem(menuId, null);
             itemEditor.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

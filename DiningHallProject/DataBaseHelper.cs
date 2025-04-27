@@ -106,6 +106,132 @@ namespace DiningHallProject
             }
         }
 
+        public static void AddFeedbackToDB(string userEmail, string diningHallName, string rating, string comment)
+        {
+            string query1 = "SELECT user_id FROM Users WHERE userEmail = @email";
+
+            string query2 = "SELECT dining_hall_id FROM diningHalls WHERE name = @name";
+
+            string query3 = "INSERT INTO Feedback (user_id, feedbackDate, comments, rating, dining_hall_id) " +
+                           "VALUES (@UserID, @feedbackDate, @comment, @ratings, @diningHall);";
+
+            int userId;
+            int diningHallid;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    //gets userid
+                    using (SqlCommand command = new SqlCommand(query1, connection))
+                    {
+                        command.Parameters.AddWithValue("@email", userEmail);
+
+
+                        Object result = command.ExecuteScalar();
+
+                        if (result == null)
+                        {
+                            throw new Exception("No user found.");
+                        }
+                        userId = Convert.ToInt32(result);
+                        
+                        
+                    }
+                    using (SqlCommand command = new SqlCommand(query2, connection))
+                    {
+                        command.Parameters.AddWithValue("@name", diningHallName);
+
+
+                        Object result = command.ExecuteScalar();
+
+                        if (result == null)
+                        {
+                            throw new Exception("No dining hall found.");
+                        }
+                        diningHallid = Convert.ToInt32(result);
+
+
+                    }
+                    using (SqlCommand command = new SqlCommand(query3, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", userId);
+                        command.Parameters.AddWithValue("@diningHall", diningHallid);
+                        command.Parameters.AddWithValue("@feedbackDate", DateTime.Today);
+                        command.Parameters.AddWithValue("@ratings", rating);
+                        command.Parameters.AddWithValue("@comment", comment);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        public System.Data.DataTable GetFeedback(string diningHallName, string userEmail)
+        {
+            string query1 = "SELECT user_id FROM Users WHERE userEmail = @email";
+
+            string query2 = "SELECT dining_hall_id FROM diningHalls WHERE name = @diningHallName";
+
+            string query3 = "SELECT feedbackDate, comments, rating FROM Feedback WHERE dining_hall_id = @diningHallId AND user_id = @userId;";
+
+            string adminQuery = "SELECT * FROM Feedback WHERE dining_hall_id = @diningHallId";
+
+            int userId;
+            int hallId;
+
+            System.Data.DataTable item_table = new System.Data.DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    command.Parameters.AddWithValue("@email", userEmail);
+                    Object result = command.ExecuteScalar();
+                    if (result == null)
+                    {
+                        throw new Exception("No user found.");
+                    }
+                    userId = Convert.ToInt32(result);
+
+
+                }
+                // Gets diningHall id
+                using (SqlCommand command = new SqlCommand(query2, connection))
+                {
+                    command.Parameters.AddWithValue("@diningHallName", diningHallName);
+                    Object result = command.ExecuteScalar();
+                    if (result == null)
+                    {
+                        throw new Exception("Hall not found.");
+                    }
+                    hallId = Convert.ToInt32(result);
+                }
+                // Gets info if user is admin
+                if (getUserRole(userEmail) == "admin")
+                {
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(adminQuery, connection))
+                    {
+                        dataAdapter.SelectCommand.Parameters.AddWithValue("@diningHallId", hallId);
+                        dataAdapter.Fill(item_table);
+                    }
+                } else
+                {
+                    // Gets info regarding dining hall
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query3, connection))
+                    {
+                        dataAdapter.SelectCommand.Parameters.AddWithValue("@userId", userId);
+                        dataAdapter.SelectCommand.Parameters.AddWithValue("@diningHallId", hallId);
+                        dataAdapter.Fill(item_table);
+                    }
+                }
+            }
+            return item_table;
+        }
         public static bool UserExists(string userEmail)
         {
             //Change connection strings eventually not use sensitive information. CUrrently in use for development
