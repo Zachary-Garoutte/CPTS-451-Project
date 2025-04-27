@@ -11,7 +11,7 @@ using Azure.Identity;
 
 namespace DiningHallProject
 {
-    public partial class Form4 : Form
+    public partial class Form4 : DraggableForm
     {
         public Form4()
         {
@@ -62,6 +62,16 @@ namespace DiningHallProject
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

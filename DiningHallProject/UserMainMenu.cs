@@ -13,7 +13,7 @@ using Microsoft.Data.SqlClient;
 
 namespace DiningHallProject
 {
-    public partial class UserMainMenu: Form
+    public partial class UserMainMenu: DraggableForm
     {
         private string currentUserEmail;
         public UserMainMenu(string email)
@@ -26,13 +26,13 @@ namespace DiningHallProject
         private void viewMenuButton_Click(object sender, EventArgs e)
         {
             Form4 menuPage = new Form4();
-            menuPage.Show();
+            menuPage.ShowDialog();
         }
 
         private void modifyAccountButton_Click(object sender, EventArgs e)
         {
             AccountModificationForm modForm = new AccountModificationForm(currentUserEmail);
-            modForm.Show();
+            modForm.ShowDialog();
         }
         private void LoadUserDetails()
         {
@@ -67,6 +67,23 @@ namespace DiningHallProject
                     MessageBox.Show("Error loading user details: " + ex.Message);
                 }
             }
+        }
+
+        private void feedback_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("in feedback clik (main menu): " + currentUserEmail);
+            FeedbackMenu feedbackWindow = new FeedbackMenu(currentUserEmail);
+            feedbackWindow.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

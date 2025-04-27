@@ -51,8 +51,6 @@ namespace DiningHallProject
                     string attemptedHash = handler.HashPassword($"{storedSalt}{passwordEntered}");
                     if (attemptedHash.Equals(storedPassword))
                     {
-                        MessageBox.Show("Success: User logged in ");
-                        //CREATE USER HERE FROM USER OBJECT (TO BE CREATED)
                         return true;
                     }
                     else

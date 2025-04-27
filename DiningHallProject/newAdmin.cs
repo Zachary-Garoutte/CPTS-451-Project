@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DiningHallProject
 {
-    public partial class newAdmin : Form
+    public partial class newAdmin : DraggableForm
     {
         public newAdmin()
         {
@@ -32,6 +32,26 @@ namespace DiningHallProject
         {
             DatabaseHelper.AddAccountToDB(StudentID.Text, firstName.Text, lastName.Text, "NewAdmin", StudentEmail.Text, PhoneText.Text, AdressText.Text, CityText.Text, DOBpicker.Value, "admin", 0, 0);
 
+            this.Close();
+        }
+
+        private void newAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StudentIDText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

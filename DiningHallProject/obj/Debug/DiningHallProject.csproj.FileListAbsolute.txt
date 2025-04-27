@@ -2,7 +2,6 @@ C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\bin\Debug\Dining
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\bin\Debug\DiningHallProject.exe
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\bin\Debug\DiningHallProject.pdb
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.csproj.AssemblyReference.cache
-C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.Form1.resources
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.Properties.Resources.resources
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.csproj.GenerateResource.cache
 C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.csproj.CoreCompileInputs.cache
@@ -437,3 +436,16 @@ C:\CPTS451\DiningHallProject\obj\Debug\DiningHallProject.csproj.CoreCompileInput
 C:\CPTS451\DiningHallProject\obj\Debug\DiningHa.C7D94A99.Up2Date
 C:\CPTS451\DiningHallProject\obj\Debug\DiningHallProject.exe
 C:\CPTS451\DiningHallProject\obj\Debug\DiningHallProject.pdb
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.adminPage.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.editHall.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.editItem.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.editMenu.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.hallEditor.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.Form4.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.newAdmin.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.UserMainMenu.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.AccountModificationForm.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.Login.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.FeedbackMenu.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.NewFeedback.resources
+C:\Users\luisg\source\repos\DiningHallProject\DiningHallProject\obj\Debug\DiningHallProject.ViewFeedback.resources

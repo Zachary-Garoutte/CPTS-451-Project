@@ -11,9 +11,9 @@ using Microsoft.Data.SqlClient;
 
 namespace DiningHallProject
 {
-    public partial class Form1 : Form
+    public partial class Login : DraggableForm
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace DiningHallProject
             createAccountForm.ShowDialog();
         }
 
-        private void Login(object sender, EventArgs e)
+        private void Form1(object sender, EventArgs e)
         {
             string email = userName.Text.Trim();
             string pwd = password.Text.Trim();
@@ -66,8 +66,9 @@ namespace DiningHallProject
 
                     if (role == "admin")
                     {
-                        adminPage adminPage = new adminPage();
-                        adminPage.ShowDialog();
+                        adminPage adminPage = new adminPage(email);
+                        adminPage.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -124,6 +125,16 @@ namespace DiningHallProject
             menusWindow.ShowDialog();
         }
         private void userName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
         {
 
         }
