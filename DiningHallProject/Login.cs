@@ -16,6 +16,7 @@ namespace DiningHallProject
         public Login()
         {
             InitializeComponent();
+            Console.WriteLine("LoginInitialized");
         }
 
         private void Label2_Click(object sender, EventArgs e)
@@ -69,7 +70,6 @@ namespace DiningHallProject
                     {
                         adminPage adminPage = new adminPage(email);
                         adminPage.Show();
-                        this.Hide();
                     }
                     else
                     {

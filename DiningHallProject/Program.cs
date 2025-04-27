@@ -16,6 +16,13 @@ namespace DiningHallProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Application.ThreadException += (sender, e) =>
+            {
+                MessageBox.Show($"Unhandled exception: {e.Exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            };
+
+            Console.WriteLine("Next It loads the Form");
             Application.Run(new Login());
         }
     }
