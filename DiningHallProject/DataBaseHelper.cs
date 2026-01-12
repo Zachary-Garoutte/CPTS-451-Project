@@ -15,13 +15,7 @@ namespace DiningHallProject
 {
     class DatabaseHelper
     {
-        private static string connectionString = "Server=tcp:dininghallsql.database.windows.net,1433;Initial Catalog=DiningHallSQLDatabase;Persist Security Info=False;User ID=SqlAdmin;Password=Dininghalladmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            //"Server=tcp:dininghallsql.database.windows.net,1433;" +
-            //"Initial Catalog=DiningHallSQLDatabase;" +
-            //"Encrypt=True;" +
-            //"TrustServerCertificate=False;" +
-            //"Connection Timeout=30;" +
-            //"Authentication=Active Directory Interactive;";
+        private static string connectionString = "";
 
         public static SqlConnection GetConnection()
         {
@@ -235,7 +229,7 @@ namespace DiningHallProject
         public static bool UserExists(string userEmail)
         {
             //Change connection strings eventually not use sensitive information. CUrrently in use for development
-            string connectionString = "Server=tcp:dininghallsql.database.windows.net,1433;Initial Catalog=DiningHallSQLDatabase;Persist Security Info=False;User ID=SqlAdmin;Password=Dininghalladmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; 
+            string connectionString = ""; 
 
             // SQL query to verify the username and email
             string query = "SELECT COUNT(*) FROM Users WHERE userEmail = @email";
